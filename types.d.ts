@@ -1,0 +1,27 @@
+export interface IArtist {
+    name: string;
+    image: string | null;
+    information: string;
+}
+export interface IAlbum {
+    title: string;
+    artist: Artist;
+    createdDate: string;
+    image: string | null;
+}
+export interface AlbumWithoutId {
+    title: string;
+    artist: string;
+    createdDate: string;
+    image: string | null;
+}
+export interface ITrack {
+    title: string;
+    album: Album;
+    duration: string;
+}
+export interface TrackWithoutId {
+    title: string;
+    album: string;
+    duration: string;
+}
