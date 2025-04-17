@@ -21,9 +21,10 @@ trackHistory.post('/', async (req, res) => {
     }
 
     const newTrackHistory = {
-        user: user,
+        user: user.id,
         track: req.body.track,
-        datetime: new Date(),    }
+        datetime: new Date(),
+    }
     const trackHistory = new TrackHistory(newTrackHistory);
     await trackHistory.save();
     res.send(trackHistory);
